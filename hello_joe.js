@@ -4,6 +4,6 @@ function hello_joe(USERNAME){
 		return "hello!";
 	}
 	else{
-		return "hello" + "!";
+		return "hello, " + USERNAME + "!";
 	} 
 };

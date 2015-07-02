@@ -1,62 +1,70 @@
 
-function testCase(id) {
-
-	 	var NewDiv = document.createElement("div");
-
-	 	
-	 	NewDiv.id="mydiv" + id;
-	 	NewDiv.style.height="300px";
-	 	NewDiv.style.width="300px";
-	 	NewDiv.style.border="5px solid black";
-	 	
-
-		document.body.appendChild(NewDiv);
-		
-
-		this.id=NewDiv.id;
-		this.message= function(msg){
-			NewDiv.innerHTML=msg;
-		}
-}
-
-
-
+//declaring assert also used literal dot notation
 var assert = {
-	i:0,
-	pass:0,
-
-	 equals: function(massage,result,newmsg)
-	 {
-	 	
-		var tb = new testCase (this.i);
-	 	
-	 
 	
-		var rg = new RedOrGreen(tb.id);
-		if(massage === result) {
-			tb.message(newmsg);
-			rg.makeGreen();
-			this.pass++;
-			
+	passed:false,
+
+	//only check if the comparison passed or failed
+	equals: function(message,result, newmsg) {
+
+		if(message === result) {
+			this.passed = true;
 		}
 		else {
-			tb.message(newmsg);
-			rg.makeRed();
+			this.passed = false;
 		}
-			this.i++;
 	}
-}
-var TestMyCode = { 
+
+   }
+
+
+var TestMyCode = { // this is an object literal and it has a method which is run
+		
+	// * build the blocks
+	// * run the assert
+	// * keep count of how many tests were ran
+	// keep track of how many tests passed
+	// display how many tests passed out of how he
+	// fix the messages in t
+
+	runCount : 0,
+	testPassedCount : 0,
+
 	run:function(name,assertTest){
+		
+		this.runCount = this.runCount + 1;
+
+		var sonke = document.createElement("id");
+
+	 	// style the new div that you have created 
+	 	sonke.id= "div" + this.runCount;
+	 	sonke.style.height="300px";
+	 	sonke.style.width="300px";
+	 	sonke.style.border="5px solid black";
+	 	sonke.style.display="inline-block";
+
+		document.body.appendChild(sonke);	
+	
+		//this will check if the square is red or it's green.
+		var rg = new RedOrGreen(sonke.id);
+
 		this.name=name;
+
 		assertTest(assert);
-	}
+		// ask the assert what happened?
+		if (assert.passed){
+			rg.makeGreen();
+			sonke.innerHTML = name;
+			this.testPassedCount = this.testPassedCount + 1;
+		}
+		else{
+			rg.makeRed();
+			sonke.innerHTML = name;
+		}
+		
+		document.getElementById('testResults').innerHTML = "number of tests passed : " + this.testPassedCount + " out of " + this.runCount;
+		document.body.appendChild(testResults);
+  }
 }
-
-
-function results(text, color) {
-var p = document.createElement("p");
-p.innerHTML = "Passed tests are " + assert.pass + " out of " +assert.i;
-p.style.color = "blue";
-document.body.appendChild(p);
-}
+       //assert.showProgress()
+        // printing out the paragraph underneath my three squares
