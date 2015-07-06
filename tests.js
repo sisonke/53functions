@@ -4,6 +4,7 @@ QUnit.test( "hello test ", function( assert ) {
 
 QUnit.test( "hello_uppercase test ", function( assert ) {
  assert.equal(hello_uppercase("HELLO"), "Hello!HELLO");
+<<<<<<< HEAD
 });
 
 QUnit.test( "hello_joe test ", function( assert ) {
@@ -32,3 +33,6 @@ QUnit.test( "reverse test ", function( assert ) {
  assert.equal(reverse("eknosis"),"sisonke");
 });
 
+=======
+});
+>>>>>>> 3e445971b58d346b5e66392d8558db7649cf410f
