@@ -1,13 +1,10 @@
-
 //declaring assert also used literal dot notation
 var assert = {
-	
-	passed:false,
 
 	//only check if the comparison passed or failed
 	equals: function(message,result, newmsg) {
-
 		if(message === result) {
+	//only check if the comparison passed or failed
 			this.passed = true;
 		}
 		else {
@@ -31,7 +28,7 @@ var TestMyCode = { // this is an object literal and it has a method which is run
 	testPassedCount : 0,
 
 	run:function(name,assertTest){
-		
+	
 		this.runCount = this.runCount + 1;
 
 		var sonke = document.createElement("id");
@@ -46,17 +43,16 @@ var TestMyCode = { // this is an object literal and it has a method which is run
 		document.body.appendChild(sonke);	
 	
 		//this will check if the square is red or it's green.
-		var rg = new RedOrGreen(sonke.id);
+	var rg = new RedOrGreen(sonke.id);
 
 		this.name=name;
 
 		assertTest(assert);
 		// ask the assert what happened?
-		if (assert.passed){
 			rg.makeGreen();
-			sonke.innerHTML = name;
+		sonke.innerHTML = name;
 			this.testPassedCount = this.testPassedCount + 1;
-		}
+	}
 		else{
 			rg.makeRed();
 			sonke.innerHTML = name;

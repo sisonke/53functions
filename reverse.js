@@ -6,5 +6,4 @@ function reverse(string) {
 		s += string.substring(i - 1, i);
 		i--;
 	}
-	return s;
-}
+

@@ -5,4 +5,4 @@ function sum_numbers(n) {
 
 	}
 	return sum;
-}
+} 
