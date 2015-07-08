@@ -29,7 +29,7 @@ QUnit.test( "upper test ", function( assert ) {
 });
 
 QUnit.test( "reverse test ", function( assert ) {
- assert.equal(reverse("eknosis"),"sisonke");
+ assert.equal(reverse("ekno"),"sisonke");
 });
 
 
