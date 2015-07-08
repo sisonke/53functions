@@ -1,5 +1,5 @@
 QUnit.test( "hello test ", function( assert ) {
-  assert.equal(hello(), "hello world!" );
+  assert.equal(hello("hello world"), "hello world!" );
 });
 
 QUnit.test( "hello_uppercase test ", function( assert ) {
