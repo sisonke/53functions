@@ -7,5 +7,3 @@ function reverse(string) {
 	}
 	return s;
 } 
-
-
