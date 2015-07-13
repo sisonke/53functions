@@ -32,9 +32,15 @@ QUnit.test( "reverse test ", function( assert ) {
  assert.equal(reverse("eknosis"),"sisonke");
 });
 
-
 QUnit.test( "hello_list test ", function( assert ) {
- assert.equal(hello_list(2),"hello world,hello world");
+ assert.equal(hello_list(2), "hello world,hello world");
+});
+
+ 
+QUnit.test( "high_low test ", function( assert ) {
+	var list = [1,2,3,4,5,6,7,8,9,10];
+
+ assert.deepEqual(high_low(1,2,3,4,5,6,7,8,9,10), list);
 });
 
 
