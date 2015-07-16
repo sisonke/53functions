@@ -1,11 +1,10 @@
-	var count = 1;
+var hello_list = function(number) {
+    var count = 1;
 	var list = [];
-	var hello_list = function(number) {
-
-   while(count <= number) {
-	 console.log("hello world");
+ while(count <= number) {
+	 console.log("hello");
 	 count++;
-	 list.push("hello world");
+	 list.push("hello");
 	 }
      return list;
  }

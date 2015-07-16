@@ -31,16 +31,24 @@ QUnit.test( "upper test ", function( assert ) {
 QUnit.test( "reverse test ", function( assert ) {
  assert.equal(reverse("eknosis"),"sisonke");
 });
-
 QUnit.test( "hello_list test ", function( assert ) {
- assert.equal(hello_list(2), "hello world,hello world");
+ assert.equal(hello_list(3), "hello,hello,hello");
 });
 
  
-QUnit.test( "high_low test ", function( assert ) {
-	var list = [1,2,3,4,5,6,7,8,9,10];
 
- assert.deepEqual(high_low(1,2,3,4,5,6,7,8,9,10), list);
+QUnit.test( "high_low function", function(assert){
+	   var list = [1,2,3,4];
+	var result = high(list);
+	var result1 = low(list)
+	// is the result as we expected?
+	 assert.deepEqual(4,result);
+	 assert.deepEqual(1,result1);
+
 });
 
 
+QUnit.test( "count_words test ", function( assert ) {
+ var result = count_words("Sisonke");
+	assert.equal(result, 7);
+});

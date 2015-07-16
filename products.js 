@@ -1,0 +1,10 @@
+var fs = require('fs');
+
+this.products = function(filepath) {
+var linesInFiles = fs.readFileAsync(folderName, './files/products.csv');
+
+var rows = linesInFile.split('/n');
+       console.log("rows");
+var productList=[]
+  
+}
