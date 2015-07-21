@@ -52,3 +52,9 @@ QUnit.test( "count_words test ", function( assert ) {
  var result = count_words("Sisonke");
 	assert.equal(result, 7);
 });
+
+
+QUnit.test( "sum_word_len test ", function( assert ) {
+	var result = sum_word_len("hi am Culolethu");
+ assert.equal(result, 15);
+});
