@@ -58,3 +58,33 @@ QUnit.test( "sum_word_len test ", function( assert ) {
 	var result = sum_word_len("hi am Culolethu");
  assert.equal(result, 15);
 });
+
+QUnit.test( "longest_word test ", function( assert ) {
+	var result = longest_word("Hi everyone am coding like a champ");
+ assert.equal(result, 34);
+});
+
+
+QUnit.test( "shortest_word test ", function( assert ) {
+	var result = shortest_word("Hi everyone");
+ assert.equal(result, 11);
+});
+
+// QUnit.test( "word_length test ", function( assert ) {
+// 	var result = word_length("Sentence");
+// 	 //console.log(result);
+//  assert.equal(result,"sentence", 8);
+// });
+
+
+QUnit.test( "avg test ", function( assert ) {
+	var result = avg("sisonke");
+ assert.deepEqual(result, [7]);
+});
+
+/*
+QUnit.test( "start test ", function( assert ) {
+	var result = start("sentence");
+ assert.deepEqual(start,"sentence", 8);
+});
+*/
